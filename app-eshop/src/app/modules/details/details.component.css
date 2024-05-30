@@ -1,0 +1,12 @@
+.card:hover .btn-add-to-cart {
+  display: block;
+}
+.btn_addCart{
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+.btn_favorite{
+  background-color: #f2f0ea;
+}

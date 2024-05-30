@@ -1,0 +1,12 @@
+.img-size{
+  width: 40%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+.carousel-control-next-icon {
+  color: black; /* Cambia el color del icono a negro */
+}
+.cursor{
+  cursor: pointer;
+}

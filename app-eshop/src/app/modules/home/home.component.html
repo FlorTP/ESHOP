@@ -1,0 +1,63 @@
+<!-- <app-header></app-header>
+<main>
+  <div class="container mt-3">
+    <div class="row">
+
+        <div *ngFor="let category of categorizedImagesKeys" class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <div id="{{category}}Carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div *ngFor="let image of categorizedImages[category]; let i = index" class="carousel-item" [class.active]="i === 0">
+                  <img [src]="image" class="d-block w-100" alt="imagen categoria">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#{{category}}Carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#{{category}}Carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{category}}</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</main> -->
+<app-header></app-header>
+<main>
+  <div class="container mt-3">
+    <div class="row">
+      <div *ngFor="let category of categorizedImagesKeys" class="col-lg-4 mt-3 cursor" (click)="irCategoria(category)">
+        <div class="card" style="width: 18rem;">
+          <div id="{{category}}Carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+              <div *ngFor="let image of categorizedImages[category]; let i = index" class="carousel-item"
+                [class.active]="i === 0">
+                <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                  <img [src]="image" class="d-block img-size" alt="imagen categoria">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#{{category}}Carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            </a>
+            <a class="carousel-control-next" href="#{{category}}Carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">{{category}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
